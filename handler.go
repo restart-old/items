@@ -11,6 +11,8 @@ type PlayerHandler struct {
 	p *player.Player
 }
 
+func (*PlayerHandler) Name() string { return "Item Handler" }
+
 // NewPlayerHandler returns a new *PlayerHandler
 func NewPlayerHandler(p *player.Player) *PlayerHandler { return &PlayerHandler{p: p} }
 
