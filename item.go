@@ -1,10 +1,12 @@
 package items
 
 import (
+	"fmt"
+	"sync"
+
 	"github.com/df-mc/dragonfly/server/item"
 	"github.com/df-mc/dragonfly/server/player"
 	"github.com/df-mc/dragonfly/server/world"
-	"sync"
 )
 
 // Registered Items.
@@ -42,10 +44,8 @@ type UsableItem interface {
 // If the interface passed is not a Named, it returns true.
 func NameCompatible(v interface{}, stack item.Stack) bool {
 	if named, ok := v.(Named); ok {
-		if named.Name() == stack.CustomName() {
-			return true
-		}
-		return false
+		fmt.Println("Item Is Named")
+		return named.Name() == stack.CustomName()
 	}
 	return true
 }
