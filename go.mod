@@ -2,7 +2,7 @@ module github.com/df-plus/items
 
 go 1.17
 
-require github.com/df-mc/dragonfly v0.4.3-0.20211219122229-c554b85cd881
+require github.com/df-mc/dragonfly v0.5.2-0.20220206230232-5ac88dcd93d5
 
 require (
 	github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 // indirect
@@ -13,7 +13,7 @@ require (
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/muhammadmuzzammil1998/jsonc v0.0.0-20201229145248-615b0916ca38 // indirect
 	github.com/sandertv/go-raknet v1.10.2 // indirect
-	github.com/sandertv/gophertunnel v1.17.1 // indirect
+	github.com/sandertv/gophertunnel v1.18.2 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97 // indirect
 	golang.org/x/image v0.0.0-20210628002857-a66eb6448b8d // indirect

@@ -18,13 +18,13 @@ func NewPlayerHandler(p *player.Player) *PlayerHandler { return &PlayerHandler{p
 
 // HandleItemUse will handle when an item has been used in the air.
 // It makes sure that the item held is compatible (registered) and that it is usable.
-func (h *PlayerHandler) HandleItemUse(*event.Context) {
+func (h *PlayerHandler) HandleItemUse(ctx *event.Context) {
 	p := h.p                     // Handled player
 	heldItem, _ := p.HeldItems() // Main hand
 
 	if i, ok := Compatible(heldItem); ok { //Making sure it is registered
 		if usable, ok := i.(UsableItem); ok { // Hopefully usable
-			usable.Use(heldItem, p)
+			usable.Use(ctx, heldItem, p)
 		}
 	}
 }

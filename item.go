@@ -1,6 +1,7 @@
 package items
 
 import (
+	"github.com/df-mc/dragonfly/server/event"
 	"github.com/df-mc/dragonfly/server/item"
 	"github.com/df-mc/dragonfly/server/player"
 	"github.com/df-mc/dragonfly/server/world"
@@ -29,7 +30,7 @@ type Item interface {
 
 // Usable ...
 type Usable interface {
-	Use(stack item.Stack, p *player.Player)
+	Use(ctx *event.Context, stack item.Stack, p *player.Player)
 }
 
 // UsableItem is an interface in which there is a world.Item, and a Use() method.
